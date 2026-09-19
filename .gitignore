@@ -1,0 +1,77 @@
+# ==============================
+# StudyEdge AI - Git Ignore
+# ==============================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# Conda environment files
+*.conda
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# StudyEdge local cache
+.studyedge_cache/
+
+# Uploaded documents
+uploads/
+data/
+
+# Academic / test PDFs
+*.pdf
+
+# Model files
+models/*.gguf
+models/*.onnx
+models/*.pt
+models/*.pth
+models/*.bin
+models/*.safetensors
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code local settings
+.vscode/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
