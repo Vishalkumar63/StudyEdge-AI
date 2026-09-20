@@ -1,71 +1,86 @@
-# StudyEdge AI
+# 📚 StudyEdge AI
 
-### Private Local AI Study Assistant
+## Private Local AI Study Assistant
 
-StudyEdge AI is a document-intelligence study assistant designed to help students
-understand academic PDFs using fast retrieval, evidence-grounded answers, and
-local AI reasoning.
+StudyEdge AI is a local document intelligence assistant designed to help students understand and study from academic documents.
 
-The application allows students to upload academic documents and interact with
-them through question answering and study-material generation.
+Students can upload academic documents, ask questions, retrieve evidence, and generate study material using local AI.
 
 ---
 
 ## 🚀 Features
 
-- 📄 PDF document upload
-- 🔎 Fast document retrieval
-- 💬 Ask questions about uploaded documents
-- 🔄 Follow-up question understanding
-- 📚 Evidence-grounded answers
-- 🧠 Local LLM reasoning
+- 📄 PDF document understanding
+- 📊 Excel/XLSX spreadsheet understanding
+- 📑 PowerPoint/PPTX understanding
+- 📝 DOCX document support
+- 🖼️ Image and OCR support
+- 🔎 Evidence-grounded document retrieval
+- 🤖 Local AI reasoning
+- 🎓 Study Mode
 - 📝 MCQ generation
-- 🧠 Flashcard generation
-- 🎤 Viva question generation
-- 📌 Key concept generation
-- 📖 Document summarization
-- 🔤 OCR support for scanned PDFs
-- 📑 Source/page evidence display
-- ⚡ TF-IDF based fast retrieval
+- 🧠 Flashcards
+- 🎤 Viva questions
+- 📌 Key concepts
+- 📚 Summaries
+- ✍️ Typo-aware queries
+- 💾 Cached document indexing
+
+---
+
+## 📂 Supported Formats
+
+- PDF
+- PPTX
+- XLSX
+- XLSM
+- DOCX
+- CSV
+- TXT
+- MD
+- JSON
+- XML
+- HTML
+- PNG
+- JPG
+- JPEG
+- WEBP
+- BMP
+- TIF
+- TIFF
 
 ---
 
 ## 🏗️ Architecture
 
 ```text
-                 ┌─────────────────────┐
-                 │       Student       │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │    Streamlit UI     │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │    PDF Extraction   │
-                 │      + OCR          │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │ Chunking + TF-IDF   │
-                 │      Indexing       │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │ Evidence Retrieval  │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │ Local LLM Reasoning │
-                 │    Llama 3.2 3B    │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │ Answer / Study Mode │
-                 └─────────────────────┘
+                    StudyEdge AI
+                         │
+                         ▼
+                   Streamlit UI
+                         │
+                         ▼
+                Document Ingestion
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+         PDF            PPTX           XLSX
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+              Text / Table Extraction
+                         │
+                         ▼
+                      Chunking
+                         │
+                         ▼
+                  TF-IDF Retrieval
+                         │
+                         ▼
+                   Evidence Layer
+                         │
+                         ▼
+                 Local LLM Reasoning
+                         │
+                         ▼
+                    User Answer
