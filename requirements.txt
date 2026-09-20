@@ -1,0 +1,12 @@
+streamlit
+PyMuPDF
+numpy
+requests
+pytesseract
+Pillow
+scikit-learn
+rapidfuzz
+python-docx
+python-pptx
+openpyxl
+-
